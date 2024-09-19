@@ -7,11 +7,8 @@ import { View, Text } from 'react-native';
 
 import Home from './src/screens/home';
 import Financeiro from './src/screens/Financeiro';
-// import AddOpcao from './src/screens/AddOpcao';
+import Calculadoras from './src/screens/Calculadoras';
 import Dicas from './src/screens/Dicas';
-import Backup from './src/screens/Backup';
-// import AddReceita from './src/screens/AddReceita'; 
-// import AddDespesas from './src/screens/AddDespesas';
 import CustomTabBarButton from './src/components/CustomTabBarButton';
 import styles from './src/styles/styles';
 import { Modal } from 'react-native-paper';
@@ -110,18 +107,19 @@ const MainTabNavigator = () => (
         ),
       }}
     />
-    <Tab.Screen
-      name="Backup"
-      component={Backup}
-      options={{
-        tabBarIcon: ({ color, focused }) => (
-          <View style={[styles.tabButton, focused ? styles.activeTab : null]}>
-            <Icon name="cloud-upload-outline" color={color} size={30} />
-            <Text style={[styles.tabText, { color }]}>Backup</Text>
-          </View>
-        ),
-      }}
-    />
+<Tab.Screen
+  name="Calculadoras"
+  component={Calculadoras} 
+  options={{
+    tabBarIcon: ({ color, focused }) => (
+      <View style={[styles.tabButton, focused ? styles.activeTab : null]}>
+        <Icon name="calculator-outline" color={color} size={30} />
+        <Text style={[styles.tabText, { color }]}>Calculadoras</Text>
+      </View>
+    ),
+  }}
+/>
+
   </Tab.Navigator>
 );
 

@@ -26,7 +26,7 @@ const CalcularJurosCompostos = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Home')}>
+            <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Calculadoras')}>
                 <Text style={styles.backButtonText}>Voltar para Home</Text>
             </TouchableOpacity>
             <Text style={styles.title}>Calculadora de Juros Compostos</Text>
